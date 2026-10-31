@@ -199,37 +199,8 @@
 <button type="button" id="quickTaken" class="quick-action taken"><span aria-hidden="true">✓</span><strong>Sudah minum</strong><small>Catat untuk tanggal ini</small></button>
 <button type="button" id="quickMissed" class="quick-action missed"><span aria-hidden="true">−</span><strong>Belum minum</strong><small>Catat untuk tanggal ini</small></button>
 </div><p class="quick-feedback" id="quickFeedback" role="status" aria-live="polite"></p>
-<div id="selectedDayLogs" class="selected-day-logs" aria-live="polite"></div><button type="button" id="focusMedicineForm" class="calendar-full-btn">+ Catatan lengkap / lebih dari satu obat</button></aside>
+<div id="selectedDayLogs" class="selected-day-logs" aria-live="polite"></div></aside>
 </div>
-<details class="advanced-entry" id="advancedMedicineEntry"><summary>+ Tambah catatan lengkap (opsional)</summary><div class="medicine-form-heading"><div><span class="calendar-kicker">TAMBAH CATATAN</span><h4>Isi catatan minum obat</h4></div><p>Tanggal otomatis mengikuti pilihan kalender.</p></div>
-<div class="medicine-form" id="medicineForm">
-<div class="field">
-<label for="obat">Nama obat</label>
-<input id="obat" placeholder="Contoh: Rifampisin" type="text"/>
-</div>
-<div class="field">
-<label for="tanggal">Tanggal</label>
-<input id="tanggal" type="date"/>
-</div>
-<div class="field">
-<label for="waktu">Waktu</label>
-<input id="waktu" type="time"/>
-</div>
-<div class="field">
-<label for="status">Status</label>
-<select id="status">
-<option value="Sudah diminum">Sudah diminum</option>
-<option value="Belum diminum">Belum diminum</option>
-<option value="Terlewat">Terlewat</option>
-</select>
-</div>
-<div class="field wide">
-<label for="catatan">Catatan</label>
-<input id="catatan" placeholder="Contoh: diminum setelah sarapan" type="text"/>
-</div>
-<button class="btn primary medicine-add" onclick="addMedicineLog()" type="button">Tambah Catatan</button>
-</div>
-</details>
 <div class="medicine-summary" id="medicineSummary">
 <div><strong id="totalCatatan">0</strong><span>Total catatan</span></div>
 <div><strong id="sudahDiminum">0</strong><span>Sudah diminum</span></div>
