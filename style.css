@@ -67,3 +67,15 @@ body{background:#fafcfb;background-image:radial-gradient(#bddfdc55 .7px,transpar
 .calendar-shortcut h3{font-size:24px;color:#104b5b;margin:6px 0 4px}
 .calendar-shortcut p{margin:0;color:#658690}
 .calendar-shortcut .btn{white-space:nowrap}
+
+
+/* Daftar pustaka — bagian bawah beranda */
+.references-section{background:linear-gradient(180deg,#f9fcfb 0%,#f2faf8 100%)}
+.references-list{padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1100px;margin:32px auto 20px}
+.reference-item{display:flex;align-items:flex-start;gap:16px;min-width:0;padding:23px 24px;background:#fff;border:1px solid #e0efeb;border-radius:22px;box-shadow:0 10px 28px rgba(22,77,70,.045);transition:transform .2s ease,box-shadow .2s ease}
+.reference-item:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(22,77,70,.09)}
+.reference-symbol{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#e6f7f2;color:#127e73;font:800 14px 'Nunito',sans-serif}
+.reference-copy{min-width:0}.reference-type{font:800 11px 'Nunito',sans-serif;letter-spacing:.055em;color:#148c7e;text-transform:uppercase}
+.reference-copy p{font-size:14px;line-height:1.75;color:#354f50;margin:8px 0 13px;overflow-wrap:anywhere}.reference-copy a{display:inline-flex;gap:7px;align-items:center;color:#087d74;text-decoration:none;font-size:13px;font-weight:800}.reference-copy a:hover{text-decoration:underline}
+.references-note{max-width:1060px;margin:0 auto;color:#667a78;font-size:13px;line-height:1.7}
+@media(max-width:760px){.references-list{grid-template-columns:1fr;gap:12px}.reference-item{padding:18px;gap:12px}.reference-symbol{width:36px;height:36px;flex-basis:36px}.reference-copy p{font-size:13px}}
