@@ -105,11 +105,11 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 // Quiz TB Anak
 const tbQuiz=[
- {q:'Apa itu TB (Tuberkulosis) pada anak?',a:['Penyakit yang hanya menyerang kulit','Penyakit menular yang dapat menyerang paru-paru dan organ lain','Alergi biasa','Penyakit karena kekurangan vitamin'],c:1},
- {q:'Bagaimana kuman TB dapat menyebar?',a:['Melalui udara saat penderita TB batuk atau bersin','Melalui warna pakaian','Karena terlalu sering bermain','Karena makan buah'],c:0},
- {q:'Gejala apa yang perlu diperhatikan pada anak?',a:['Berat badan sulit naik atau menurun','Rambut tumbuh lebih cepat','Kuku menjadi panjang','Anak sering tertawa'],c:0},
- {q:'Apa yang sebaiknya dilakukan selama pengobatan TB?',a:['Berhenti minum obat saat terlihat sehat','Minum obat sesuai jadwal dan kontrol sesuai anjuran','Mengubah dosis sendiri','Minum obat hanya saat demam'],c:1},
- {q:'Apa salah satu cara membantu mencegah penularan TB di rumah?',a:['Menutup semua jendela','Membiarkan rumah pengap','Membuka jendela agar udara berganti','Menghentikan pengobatan lebih cepat'],c:2}
+ {q:'Apa itu TB (Tuberkulosis) pada anak?',a:['Infeksi saluran napas yang selalu disebabkan virus dan hanya menyerang paru-paru','Penyakit infeksi menular akibat bakteri TB yang dapat menyerang paru-paru maupun organ lain','Peradangan paru yang timbul hanya akibat alergi terhadap debu','Infeksi yang hanya terjadi bila daya tahan tubuh anak sangat rendah'],c:1},
+ {q:'Bagaimana kuman TB dapat menyebar?',a:['Melalui udara ketika penderita TB paru menular mengeluarkan partikel infeksius, misalnya saat batuk','Melalui penggunaan piring atau sendok secara bergantian dengan pasien TB','Melalui sentuhan kulit ketika berjabat tangan dengan penderita TB','Melalui makanan yang disentuh oleh orang yang sedang menjalani pengobatan TB'],c:0},
+ {q:'Gejala apa yang perlu diperhatikan pada anak?',a:['Berat badan sulit naik atau menurun tanpa penyebab yang jelas, terutama bila ada riwayat kontak TB','Batuk yang hanya terjadi sesaat setelah minum air dingin tanpa keluhan lain','Nafsu makan meningkat dan berat badan naik secara konsisten','Bersin beberapa kali saat berada di lingkungan berdebu tanpa keluhan menetap'],c:0},
+ {q:'Apa yang sebaiknya dilakukan selama pengobatan TB?',a:['Menghentikan obat ketika keluhan menghilang dan melanjutkannya bila gejala kembali','Memberikan obat sesuai jadwal dari tenaga kesehatan dan menghadiri kontrol yang dianjurkan','Mengurangi dosis secara mandiri saat anak mulai terlihat lebih aktif','Mengganti obat TB dengan suplemen untuk menghindari efek samping'],c:1},
+ {q:'Apa salah satu cara membantu mencegah penularan TB di rumah?',a:['Menutup seluruh ventilasi agar udara dari luar tidak membawa kuman masuk','Mengandalkan penyemprotan pewangi ruangan sebagai tindakan utama pencegahan','Memperbaiki ventilasi dengan membuka jendela agar pertukaran udara berlangsung baik','Menghentikan pengobatan anggota keluarga segera setelah batuknya berkurang'],c:2}
 ];
 let quizIndex=0,quizScoreValue=0,quizAnswered=false;
 const qN=document.getElementById('quizNumber'),qS=document.getElementById('quizScore'),qQ=document.getElementById('quizQuestion'),qA=document.getElementById('quizAnswers'),qF=document.getElementById('quizFeedback'),qNext=document.getElementById('quizNext');
