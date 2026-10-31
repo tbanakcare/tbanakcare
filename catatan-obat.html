@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Kalender pencatatan obat TB Anak Care" name="description"/><title>Kalender Minum Obat | TB Anak Care</title><link href="style.css" rel="stylesheet"/><link href="calendar-page.css" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/></head><body><header class="navbar"><a class="brand" href="index.html#beranda"><span class="brand-mark"><img alt="" src="assets/icons/flower.svg"/></span><span class="brand-copy">TB Anak <em>Care</em><small>Teman tumbuh sehat si kecil</small></span></a><button aria-expanded="false" aria-label="Buka menu" class="menu-toggle">☰</button><nav aria-label="Navigasi utama" class="nav-links"><a href="index.html#beranda">Beranda</a><a href="index.html#materi">Belajar</a><a class="active" href="catatan-obat.html">Catatan Obat</a><a href="index.html#quiz">Kuis</a><a href="index.html#faq">FAQ</a></nav></header><main class="calendar-main"><div class="calendar-page-lead"><a class="back-link" href="index.html#beranda">← Kembali ke beranda</a><span class="eyebrow">PENDAMPINGAN PENGOBATAN</span><h1>Kalender Minum Obat <em>Si Kecil</em></h1><p>Pilih tanggal, masukkan nama obat sesuai resep, lalu tandai sudah atau belum diminum. Semua catatan tetap ada di perangkat ini.</p></div><section class="section" id="catatan-obat">
+<div class="section-heading"><div aria-hidden="true" class="section-illustration"><img alt="" src="assets/icons/calendar.svg"/></div>
+<span class="eyebrow">Catatan Minum Obat</span>
+<h2>Pantau jadwal obat TB anak</h2>
+<p>
+          Pilih tanggal pada kalender untuk mencatat obat dan melihat riwayat minum obat si kecil.
+          Catatan tersimpan di perangkat yang sedang digunakan.
+        </p>
+</div>
+<div class="medicine-panel"><div class="medicine-topline"><div><span class="eyebrow">✦ Kalender Minum Obat</span><h3>Tandai minum obat dengan mudah</h3><p>Pilih tanggal → tekan Sudah minum atau Belum minum. Catatan disimpan di browser perangkat ini.</p></div><div class="progress-dial" id="adherenceRing"><strong id="adherencePercent">0%</strong><small>Catatan diminum</small></div></div>
+<div class="calendar-layout">
+<div aria-label="Kalender pencatatan obat" class="calendar-card">
+<div class="calendar-heading"><div><span class="calendar-kicker">KALENDER PENGOBATAN</span><h4 id="calendarMonthLabel">Oktober 2026</h4></div><div class="calendar-controls"><button aria-label="Bulan sebelumnya" id="calendarPrev" type="button">‹</button><button id="calendarToday" type="button">Hari ini</button><button aria-label="Bulan berikutnya" id="calendarNext" type="button">›</button></div></div>
+<div aria-hidden="true" class="calendar-weekdays"><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span></div>
+<div aria-label="Pilih tanggal pencatatan obat" class="medicine-calendar" id="medicineCalendar" role="group"></div>
+<div class="calendar-legend"><span><i class="legend-dot done"></i> Sudah diminum</span><span><i class="legend-dot missed"></i> Belum / terlewat</span><span><i class="legend-dot mixed"></i> Campuran</span><span><i class="legend-dot none"></i> Belum dicatat</span></div>
+</div>
+<aside class="calendar-side"><div class="calendar-side-icon"><img alt="" src="assets/icons/calendar.svg"/></div><span class="calendar-kicker">RINGKASAN TANGGAL</span><h4 id="selectedDayHeading">Catatan hari ini</h4><p id="selectedDayIntro">Pilih tanggal pada kalender untuk melihat catatannya.</p><div class="quick-med-config">
+<label for="quickMedicineName">Nama obat sesuai resep</label>
+<div class="quick-input-row"><input autocomplete="off" id="quickMedicineName" maxlength="120" placeholder="Mis. Obat TB sesuai resep" type="text"/><button id="quickSaveName" type="button">Simpan</button></div>
+<small id="quickNameHelp">Isi nama obat sesuai resep sekali saja, kemudian pilih tanggal dan status minum obat.</small>
+</div>
+<div aria-label="Pencatatan obat cepat" class="quick-actions">
+<button class="quick-action taken" id="quickTaken" type="button"><span aria-hidden="true">✓</span><strong>Sudah minum</strong><small>Catat untuk tanggal ini</small></button>
+<button class="quick-action missed" id="quickMissed" type="button"><span aria-hidden="true">−</span><strong>Belum minum</strong><small>Catat untuk tanggal ini</small></button>
+</div><p aria-live="polite" class="quick-feedback" id="quickFeedback" role="status"></p>
+<div aria-live="polite" class="selected-day-logs" id="selectedDayLogs"></div></aside>
+</div>
+
+<div class="medicine-summary" id="medicineSummary">
+<div><strong id="totalCatatan">0</strong><span>Total catatan</span></div>
+<div><strong id="sudahDiminum">0</strong><span>Sudah diminum</span></div>
+<div><strong id="belumDiminum">0</strong><span>Belum/terlewat</span></div>
+</div>
+<details class="history-details"><summary>Lihat semua riwayat dalam tabel <span>⌄</span></summary><div class="table-wrap">
+<table class="medicine-table">
+<thead>
+<tr>
+<th>Tanggal</th>
+<th>Waktu</th>
+<th>Nama obat</th>
+<th>Status</th>
+<th>Catatan</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody id="medicineTableBody">
+<tr class="empty-row">
+<td colspan="6">Belum ada catatan minum obat.</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<div class="medicine-actions">
+<button class="btn secondary" onclick="exportMedicineCSV()" type="button">Unduh Catatan CSV</button>
+<button class="btn danger-button" onclick="clearMedicineLogs()" type="button">Hapus Semua Catatan</button>
+</div>
+<div class="note medicine-note">
+<strong>Penting:</strong> kalender ini hanya membantu pencatatan, bukan pengingat otomatis atau penentu jadwal pengobatan. Jangan mengubah dosis, jadwal,
+          atau menghentikan obat tanpa petunjuk tenaga kesehatan.
+        </div>
+</div>
+</section></main><footer class="calendar-footer">TB Anak Care · Pencatatan pribadi. Untuk jadwal dan dosis obat, ikuti arahan tenaga kesehatan.</footer><script src="script.js"></script></body></html>

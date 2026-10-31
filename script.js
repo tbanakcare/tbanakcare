@@ -49,6 +49,24 @@ function renderMedicineLogs(){
   if(progress)progress.textContent=percent+'%';
   renderMedicineCalendar();
 }
+function addMedicineLog(){
+  const obat=document.getElementById("obat").value.trim();
+  const tanggal=document.getElementById("tanggal").value;
+  const waktu=document.getElementById("waktu").value;
+  const status=document.getElementById("status").value;
+  const catatan=document.getElementById("catatan").value.trim();
+  if(!obat || !tanggal){
+    alert("Isi nama obat dan tanggal terlebih dahulu.");
+    return;
+  }
+  const logs=getMedicineLogs();
+  logs.unshift({obat,tanggal,waktu,status,catatan});
+  saveMedicineLogs(logs);
+  document.getElementById("obat").value="";
+  document.getElementById("catatan").value="";
+  renderMedicineLogs();
+  document.getElementById("selectedDayLogs")?.scrollIntoView({block:"nearest",behavior:"smooth"});
+}
 function deleteMedicineLog(index){
   const logs=getMedicineLogs();
   logs.splice(index,1);
@@ -205,11 +223,13 @@ function renderSelectedCalendarDay(logs){
   }
 }
 document.addEventListener('DOMContentLoaded',()=>{
+  if(!document.getElementById('medicineCalendar')) return;
   selectCalendarDate(localISO(new Date()));
   document.getElementById('calendarPrev')?.addEventListener('click',()=>{calendarViewDate=new Date(calendarViewDate.getFullYear(),calendarViewDate.getMonth()-1,1);renderMedicineCalendar()});
   document.getElementById('calendarNext')?.addEventListener('click',()=>{calendarViewDate=new Date(calendarViewDate.getFullYear(),calendarViewDate.getMonth()+1,1);renderMedicineCalendar()});
   document.getElementById('calendarToday')?.addEventListener('click',()=>selectCalendarDate(localISO(new Date())));
-
+  document.getElementById('tanggal')?.addEventListener('change',e=>{if(/^\d{4}-\d{2}-\d{2}$/.test(e.target.value))selectCalendarDate(e.target.value)});
+  document.getElementById('focusMedicineForm')?.addEventListener('click',()=>{document.getElementById('advancedMedicineEntry').open=true;document.getElementById('medicineForm')?.scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('obat')?.focus({preventScroll:true})});
 });
 
 

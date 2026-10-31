@@ -1,0 +1,21 @@
+/* Halaman khusus kalender: menyatu dengan tampilan TB Anak Care */
+.calendar-main{max-width:1250px;margin:auto;padding:36px 24px 60px}
+.calendar-page-lead{padding:28px 12px 18px}
+.calendar-page-lead .eyebrow{display:block;margin:22px 0 10px}
+.calendar-page-lead h1{font-family:Nunito,sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.15;color:#104b5b;margin:0 0 12px;font-weight:900}
+.calendar-page-lead h1 em{font-style:normal;color:#11a39c}
+.calendar-page-lead p{max-width:720px;color:#658690;line-height:1.7;margin:0}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:#117e80;text-decoration:none;font-weight:800;font-size:14px}
+.calendar-main .section{padding:22px 0 32px}
+.calendar-main .section-heading{display:none}
+.calendar-main .calendar-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:20px}
+.calendar-main .medicine-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.calendar-main .calendar-card,.calendar-main .calendar-side{min-width:0}
+.calendar-main .calendar-day{min-width:0}
+.calendar-shortcut{margin:32px auto 0;padding:28px 32px;border:1px solid #d9eae6;background:linear-gradient(115deg,#f0fbf8,#fff5fa);border-radius:26px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.calendar-shortcut h3{font-size:24px;color:#104b5b;margin:6px 0 4px}
+.calendar-shortcut p{margin:0;color:#658690}
+.calendar-shortcut .btn{white-space:nowrap}
+.calendar-footer{text-align:center;padding:28px 24px 42px;color:#6f909a;font-size:13px}
+@media(max-width:840px){.calendar-main .calendar-layout{grid-template-columns:1fr}.calendar-shortcut{flex-direction:column;align-items:flex-start}.calendar-main{padding:18px 12px 36px}}
+@media(max-width:480px){.calendar-main .calendar-card{padding:14px 9px}.calendar-main .calendar-day{min-height:46px}.calendar-main .calendar-heading{flex-wrap:wrap;gap:10px}.calendar-main .calendar-weekdays span{font-size:11px}.calendar-main .calendar-controls{gap:5px}.calendar-main .calendar-controls button{min-width:32px}}
