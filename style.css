@@ -79,3 +79,13 @@ body{background:#fafcfb;background-image:radial-gradient(#bddfdc55 .7px,transpar
 .reference-copy p{font-size:14px;line-height:1.75;color:#354f50;margin:8px 0 13px;overflow-wrap:anywhere}.reference-copy a{display:inline-flex;gap:7px;align-items:center;color:#087d74;text-decoration:none;font-size:13px;font-weight:800}.reference-copy a:hover{text-decoration:underline}
 .references-note{max-width:1060px;margin:0 auto;color:#667a78;font-size:13px;line-height:1.7}
 @media(max-width:760px){.references-list{grid-template-columns:1fr;gap:12px}.reference-item{padding:18px;gap:12px}.reference-symbol{width:36px;height:36px;flex-basis:36px}.reference-copy p{font-size:13px}}
+
+/* ===== VIDEO EDUKASI TB ANAK CARE ===== */
+.tb-video-section { padding: 65px 20px; background: linear-gradient(180deg,#f0faf8 0%,#fffafc 100%); text-align:center; }
+.tb-video-container { max-width: 880px; margin:0 auto; }
+.tb-video-eyebrow { display:inline-block; font-weight:800; letter-spacing:.14em; font-size:.75rem; color:#14766e; margin-bottom:12px; }
+.tb-video-container h2 { font-size:clamp(1.6rem,4vw,2.5rem); line-height:1.2; margin:0 0 12px; color:#1b645f; }
+.tb-video-container > p { max-width:690px; margin:0 auto 22px; color:#56716e; line-height:1.75; }
+.tb-video-player { display:block; width:100%; aspect-ratio:16/9; max-height:510px; border-radius:20px; background:#0c2a29; box-shadow:0 12px 35px rgba(25,83,76,.17); object-fit:contain; }
+.tb-video-container .tb-video-note { font-size:.82rem; margin:15px auto 0; color:#647b79; }
+@media(max-width:600px) { .tb-video-section { padding:42px 16px; } .tb-video-player { border-radius:14px; } }
